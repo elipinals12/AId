@@ -1,0 +1,11 @@
+llama-cpp-python>=0.3.9
+huggingface_hub
+faster-whisper
+sounddevice
+numpy
+pyttsx3
+mss
+Pillow
+pyautogui
+pyperclip
+psutil
