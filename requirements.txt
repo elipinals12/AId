@@ -1,5 +1,5 @@
 llama-cpp-python>=0.3.9
-huggingface_hub
+huggingface_hub[hf_xet]
 faster-whisper
 sounddevice
 numpy

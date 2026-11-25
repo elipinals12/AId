@@ -22,7 +22,19 @@ On start AId checks your free RAM and, if you have one, your GPU memory (NVIDIA 
 
 Text ladder: Qwen2.5 72B, 32B, 14B, 7B, 3B, 1.5B. Vision ladder: Qwen2.5-VL 32B, 7B, 3B. All are 4-bit GGUF files run through llama.cpp, downloaded once from Hugging Face. Speech-to-text is faster-whisper, multilingual, sized from base to large-v3 by your RAM. Text-to-speech uses your operating system's built-in voices through pyttsx3.
 
-## Running it
+## Download (easiest)
+
+Grab the file for your OS from the GitHub Releases page and open it. No Python, no install.
+
+- Windows: `AId.exe`
+- macOS (Apple Silicon): `AId-macos.zip`, unzip, right-click AId.app, Open (first time only, since it is unsigned)
+- Linux: `AId`, then `chmod +x AId && ./AId` (needs `espeak-ng` and `libportaudio2` for voice)
+
+Release builds are CPU-only on Windows and Linux; macOS uses Metal. For NVIDIA GPU speed, run from source with a CUDA build (below).
+
+To make a release: push a tag like `v0.1.0`, and GitHub Actions builds all three files. To build locally: `pip install pyinstaller && python build.py`, output in `dist/`.
+
+## Running from source
 
 You need Python 3.10 or newer.
 
